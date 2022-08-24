@@ -18,6 +18,8 @@ app.get("/", (req: any, res: any) => {
 
 
   publisher.publish(channel, JSON.stringify(m));
+  // publisher.publish("sms", JSON.stringify(m));
+  // publisher.publish('email', JSON.stringify(m));
 
   res.send(JSON.stringify(req.query));
 });
